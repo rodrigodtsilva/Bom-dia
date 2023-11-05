@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+
+</head>
+
+<body id="fundo" onload=carregar()>
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+    <main>
+        <section>
+            <div id="p">
+                <p><span id="total-hora"><span id="hora"></span><span id="minutos"></span></span><span id="bom">
+                </span> 
+            </p>
+            </div>
+            <div id="imagem">
+                <img src="manha3.png" alt="" id="figura">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="https://github.com/rodrigodtsilva">@Rodrigo</a>
+    </footer>
+
+    <!-- --------------------------------------------------- -->
+
+    <script>
+        var hora_agora = new Date()
+        var hora = hora_agora.getHours()
+        var minutos = hora_agora.getMinutes()
+        var hora_site = document.querySelector('#hora')
+        //---------------------------------------------
+        var body = document.querySelector('#fundo')
+        var body_fundo_noite = 'rgba(21, 31, 54, 0.979)'
+        var body_fundo_manha = 'rgba(179, 146, 86, 0.842)'
+        var body_fundo_tarde = 'rgb(117, 93, 47)'
+        //---------------------------------------------
+        var img_manha = "manha3.png"
+        var img_tarde = "tarde3.png"
+        var img_noite = "noite3.png"
+        //---------------------------------------------
+        var bom = document.querySelector('#bom')
+
+        function carregar() {
+
+            if (hora >= 5 && hora <12){ //manha
+                document.querySelector("#figura").src = img_manha
+                body.style.background = (`${body_fundo_manha}`)
+                bom.innerHTML = (`Bom dia, Meu Amor. Agora são ${hora}:${minutos}.`)
+
+            }
+            else if (hora >= 12 && hora < 19 ){ // tarde
+                document.querySelector("#figura").src = img_tarde
+                body.style.background = (`${body_fundo_tarde}`)
+                bom.innerHTML = (`Boa Tarde, Meu Amor. Agora são ${hora}:${minutos}.`)
+
+            }
+            else if (hora >= 19 && hora <= 23){ //noite
+                document.querySelector("#figura").src = img_noite
+                body.style.background = (`${body_fundo_noite}`)
+                bom.innerHTML = (`Boa noite, Meu Amor. Agora são ${hora}:${minutos}.`)
+            }
+            else if (hora >= 0 && hora < 5 ){ //madrugada
+                document.querySelector("#figura").src = img_noite
+                body.style.background = (`${body_fundo_noite}`)
+                bom.innerHTML = (`Boa madrugada, Meu Amor. Agora são ${hora}:${minutos}.`)
+            }
+        }
+    </script>
+</body>
+
+</html>

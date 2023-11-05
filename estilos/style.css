@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1em;
+}
+:root {
+  --manha: rgba(179, 146, 86, 0.842);
+  --tarde: rgb(117, 93, 47);
+  --noite: rgba(21, 31, 54, 0.979);
+}
+body {
+  background: var(--manha);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  height: 15vh;
+  width: 100vw;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+header h1 {
+  font-size: 2.5em;
+  color: white;
+  text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.336);
+  padding-bottom: 10px;
+}
+main {
+  background-color: white;
+  width: 78vw;
+  height: 77vh;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.466);
+  display: flex;
+  justify-content: center;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+div#p {
+  font-size: 1.4em;
+  font-weight: bolder;
+  justify-content: center;
+  text-align: center;
+}
+#total-hora{
+  text-decoration: underline;
+}
+#imagem > #figura {
+  height: 240px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px rgb(0, 0, 0);
+}
+
+footer {
+  margin-top: 15px;
+}
+footer a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.336);
+  font-style: italic;
+}
