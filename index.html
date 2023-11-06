@@ -54,24 +54,24 @@
             if (hora >= 5 && hora <12){ //manha
                 document.querySelector("#figura").src = img_manha
                 body.style.background = (`${body_fundo_manha}`)
-                bom.innerHTML = (`Bom dia, Meu Amor. Agora são ${hora}:${minutos}.`)
+                bom.innerHTML = (`Bom dia, Meu Amor. <br/> Agora são ${hora}:${minutos}.`)
 
             }
             else if (hora >= 12 && hora < 19 ){ // tarde
                 document.querySelector("#figura").src = img_tarde
                 body.style.background = (`${body_fundo_tarde}`)
-                bom.innerHTML = (`Boa Tarde, Meu Amor. Agora são ${hora}:${minutos}.`)
+                bom.innerHTML = (`Boa Tarde, Meu Amor. <br/> Agora são ${hora}:${minutos}.`)
 
             }
             else if (hora >= 19 && hora <= 23){ //noite
                 document.querySelector("#figura").src = img_noite
                 body.style.background = (`${body_fundo_noite}`)
-                bom.innerHTML = (`Boa noite, Meu Amor. Agora são ${hora}:${minutos}.`)
+                bom.innerHTML = (`Boa noite, Meu Amor. <br/> Agora são ${hora}:${minutos}.`)
             }
             else if (hora >= 0 && hora < 5 ){ //madrugada
                 document.querySelector("#figura").src = img_noite
                 body.style.background = (`${body_fundo_noite}`)
-                bom.innerHTML = (`Boa madrugada, Meu Amor. Agora são ${hora}:${minutos}.`)
+                bom.innerHTML = (`Boa madrugada, Meu Amor. <br/> Agora são ${hora}:${minutos}.`)
             }
         }
     </script>
